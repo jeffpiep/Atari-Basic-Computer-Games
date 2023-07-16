@@ -19,12 +19,13 @@ Will need to establish a regular conditional structure with jumps to deal with a
 For now assume:
 ```
 10 IF A THEN PRINT "A" ELSE PRINT "B"
+20 REM BEXT STATEMENT
 ```
 becomes
 ```
-10 IF A THEN PRINT "A": GOTO 30
-20 PRINT "B" 
-30 REM BEXT STATEMENT
+10 IF A THEN PRINT "A": GOTO 20
+15 PRINT "B" 
+20 REM BEXT STATEMENT
 ```
 
 ### `INPUT`
