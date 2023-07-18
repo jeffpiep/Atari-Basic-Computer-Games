@@ -19,15 +19,25 @@ Will need to establish a regular conditional structure with jumps to deal with a
 For now assume:
 ```
 10 IF A THEN PRINT "A" ELSE PRINT "B"
-20 REM BEXT STATEMENT
+20 REM NEXT STATEMENT
 ```
 becomes
 ```
 10 IF A THEN PRINT "A": GOTO 20
 15 PRINT "B" 
-20 REM BEXT STATEMENT
+20 REM NEXT STATEMENT
 ```
 
 ### `INPUT`
 Atari BASIC does not allow INPUT prompts such as `INPUT$ "PROMPT";A$`. Instead use `? "PROMPT":INPUT A$`
 
+### `TAB()`
+Atari BASIC does not support the TAB() function to insert spaces. It is used original programs to center text on the screen. Common practice for conversions should be to clear the screen, set the lefthand margin to 0 and then center the title text. For example,
+```
+9 POKE 82,0: PRINT CHR$(125)
+10 POKE 85,10: PRINT "CENTERED TITLE"
+```
+Sometimes it's used to insert spaces. In those cases, it might be as simple as using a loop:
+```
+10 FOR A=1 TO 10:PRINT" ";:NEXT A: PRINT "SHIFTED TEXT"
+```
