@@ -35,5 +35,10 @@ Atari BASIC does not allow INPUT prompts such as `INPUT$ "PROMPT";A$`. Instead u
 Atari BASIC does not support the TAB() function to insert spaces. It is used original programs to center text on the screen. Common practice for conversions should be to clear the screen, set the lefthand margin to 0 and then center the title text. For example,
 ```
 9 POKE 82,0: PRINT CHR$(125)
-10 POKE 85,10: PRINT "CENTERED TITLE"
+10 POKE 85,13: PRINT "CENTERED TITLE"
+```
+In graphics mode, the horizontal cursor location of the 4-line text window is in memory location 657. For example
+```
+10 GRAPHICS 6
+20 POKE 657, 13: PRINT "CENTERED TITLE"
 ```
