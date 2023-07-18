@@ -37,7 +37,3 @@ Atari BASIC does not support the TAB() function to insert spaces. It is used ori
 9 POKE 82,0: PRINT CHR$(125)
 10 POKE 85,10: PRINT "CENTERED TITLE"
 ```
-Sometimes it's used to insert spaces. In those cases, it might be as simple as using a loop:
-```
-10 FOR A=1 TO 10:PRINT" ";:NEXT A: PRINT "SHIFTED TEXT"
-```
